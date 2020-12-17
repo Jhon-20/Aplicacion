@@ -7,13 +7,12 @@ import { NuevoComponent } from './pages/nuevo/nuevo.component';
 import { AngularFireAuthGuard, redirectLoggedInTo, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 
 
-const redirectToLogin = ()=> redirectUnauthorizedTo(['/login']);
 
 const routes: Routes = [
     { path: 'inicio', component:  InicioComponent},
     { path: 'documentacion', component: DocumentacionComponent},
     { path: 'login', component: LoginComponent},
-    { path: 'nuevo/:tarea', component: NuevoComponent,  canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectToLogin}},
+    { path: 'nuevo/:tarea', component: NuevoComponent},
     { path: '**', pathMatch: 'full', redirectTo: 'inicio'}
 ]
 

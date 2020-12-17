@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     console.log(this.notasService.nombre);
     // this.chatService.idRoom = this.forma.get('idRoom').value;
     // this.chatService.nickname = value.user.displayName;
-    this.router.navigate(['/nuevo', this.forma.get('tarea').value])
+    this.router.navigate(['/nuevo', this.forma.get('nombre').value])
       
       
   }
